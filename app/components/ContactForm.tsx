@@ -1,6 +1,5 @@
 import { X } from "lucide-react";
 import React, { useState } from "react";
-import { useRouter } from "next/router";
 
 interface FormData {
   name: string;
@@ -24,7 +23,6 @@ interface ContactFormProps {
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({ onClose, product }) => {
-  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -97,19 +95,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose, product }) => {
       }
 
       setIsSubmitted(true);
-
-      // Optional: Reset form after successful submission
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        address: "",
-        quantity: 1,
-        message: "",
-        product_id: product?.id || "default-id",
-        product_name: product?.name || "Nokia Replacement Battery - 2000mAh",
-        product_price: product?.price || 4000,
-      });
     } catch (err) {
       console.error("Submission error:", err);
       setError(

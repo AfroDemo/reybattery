@@ -9,8 +9,9 @@ import { Toaster } from './components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Premium Sandals | Barely Used',
-  description: 'Premium quality sandals, barely used for only 3 days. In pristine condition with all original packaging.',
+  title: "Power Home | ReyBattery",
+  description:
+    "Revitalize Your Nokia With Premium Power",
 };
 
 export default function RootLayout({

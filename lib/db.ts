@@ -83,3 +83,18 @@ export function getOrderById(id: number): Order | null {
     .prepare("SELECT * FROM orders WHERE id = ?")
     .get(id) as Order | null;
 }
+
+export function updateOrderStatus(id: number, status: string) {
+  const db = initializeDb();
+  try {
+    const stmt = db.prepare(`
+      UPDATE orders 
+      SET status = ?, updated_at = CURRENT_TIMESTAMP
+      WHERE id = ?
+    `);
+    return stmt.run(status, id);
+  } catch (error) {
+    console.error("Database error:", error);
+    throw new Error("Failed to update order status");
+  }
+}
