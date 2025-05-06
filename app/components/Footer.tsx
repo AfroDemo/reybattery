@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Battery className="h-6 w-6 text-indigo-400" />
-              <span className="font-semibold text-xl">PowerCell</span>
+              <span className="font-semibold text-xl">ReyBattery</span>
             </div>
             <p className="text-slate-300 mb-6">
               Bringing new life to your devices with premium replacement batteries.
