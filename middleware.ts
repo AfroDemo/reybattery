@@ -5,7 +5,7 @@ import type { NextRequest } from "next/server";
 const rateLimits = new Map<string, { count: number; resetAt: number }>();
 
 // Admin password
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "admin123";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "rebeka123";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
