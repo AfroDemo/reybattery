@@ -52,7 +52,7 @@ const OrderSection: React.FC = () => {
               
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors font-medium text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform"
+                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors font-medium text-lg shadow-md hover:shadow-lg transform hover:scale-105"
               >
                 Order Now
               </button>
